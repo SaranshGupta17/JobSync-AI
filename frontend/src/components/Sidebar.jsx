@@ -1,6 +1,6 @@
 import {auth} from "../Config/Firebase_config"
 import { signOut } from 'firebase/auth'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 const Sidebar = () => {
@@ -27,13 +27,12 @@ const Sidebar = () => {
         <div className=' text-[25px] text-blue-600 font-semibold'>VDCaller </div>
       </div>
 
-      <div className='w-full h-[90%] flex-col place-items-center mt-4'>
+      <div className='w-full h-[90%] flex-col mt-4'>
         
-        <form 
-          className="size-full"
-          onSubmit={HandleSubmit} >
-          <button type="submit" className='w-[80%] h-[6%] bg-blue-600 rounded-lg mt-8 text-white text-[15px]'>Logout</button>
-        </form>
+        <Link to = "/Main" ><h1 className="w-[90%] h-[7%] bg-zinc-200 rounded-xl place-content-center pl-4">Main</h1></Link>
+        <div className="size-full">
+          <button onClick={HandleSubmit} type="submit" className='w-[90%] h-[6%] bg-blue-600 rounded-lg mt-8 text-white text-[15px]'>Logout</button>
+        </div>
       </div>
       
     

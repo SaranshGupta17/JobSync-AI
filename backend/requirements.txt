@@ -1,0 +1,7 @@
+fastapi
+pydantic
+pymongo
+uvicorn
+pymongo[srv]
+PyMuPDF
+gridfs
